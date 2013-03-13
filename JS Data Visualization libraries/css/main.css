@@ -93,8 +93,15 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-
+html, body{
+    height:100%;
+}
+body{
+   
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-vertical;
+    background: none repeat scroll 0% 0% rgb(239, 236, 230);
+    }
 
 
 
