@@ -24,33 +24,107 @@
         
         <div id="divMain" style="width:960px;min-height:593px;margin:0 auto;background: none repeat scroll 0% 0% rgb(255, 255, 255);box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.23);/*padding:31px;border:5px solid gray;*/">
             <div class="clearfix">
-                <div style="width:900px;padding:30px;color:#365F91;">
+                <div style="width:900px;height:140px;padding:30px;color:#365F91;/*border:black solid*/">
                     <h1>JS Data Visualization libraries</h1>
                     
                 </div>
-                <div id="divSideBar" style="position:relative;top:0px;left:0px;width:227px;display:inline;float:left;">
-                    
-                    <div id="divSideBarLinks" style="position:relative;top:0px;left:0px;width:227px;text-align:center;/*padding:set per chart height*/">
-                        <img style="visibility: hidden;" title="Chart placeholder" alt="Chart placeholder"  height="" width="" src="./images/" />
-                    </div>
-                    <div id="divSideBarLinks" style="position:relative;top:227px;left:0px;width:227px;">
-                        <ul>
-                            <li><a href="#D3">D3.js</a></li>
-                            <li><a href="#flotr">Flotr2 </a></li>
-                            <li><a href="#graph">gRapha&euml;l</a></li>
-                            <li><a href="#infovis">InfoVis</a></li>
-                            <li><a href="#proc">Processing.js</a></li>
-                            <li><a href="#dojo">Dojo charting</a></li>
-                            <li><a href="#high">Highcharts.js</a></li>
-                            <li><a href="#jq">JQPlot</a></li>
-                        </ul>
-                        
+                <div id="divSideBar" style="position:fixed;width:960px;margin:0 auto;">
+                    <div id="divSideBarSection" style="width:227px;">
+                        <div id="divSideBarP1" style="position:relative;top:0px;left:0px;height:227px;text-align:center;/*padding:set per chart height*//*border: solid red;*/">
+                            <!-- create the chart -->
+                            <div dojoType="dojox.charting.widget.Chart2D" theme="dojox.charting.themes.PrimaryColors" id="viewsChart" style="width: 227px; height: 227px;">
+            
+                                    <!-- Pie Chart: add the plot -->
+                                    <div class="plot" name="default" type="Pie" radius="200" fontColor="#000" labelOffset="-20"></div>
+            
+                                    <!-- pieData is the data source -->
+                                    <div class="series" name="Last Week's Visits" array="chartData"></div> 
+            
+                            </div>
+                        </div>
+                        <div id="divSideBarP2" style="/*border: solid green;*/">
+                            <ul>
+                                <li><a href="#D3">D3.js</a></li>
+                                <li><a href="#flotr">Flotr2 </a></li>
+                                <li><a href="#graph">gRapha&euml;l</a></li>
+                                <li><a href="#infovis">InfoVis</a></li>
+                                <li><a href="#proc">Processing.js</a></li>
+                                <li><a href="#dojo">Dojo charting</a></li>
+                                <li><a href="#high">Highcharts.js</a></li>
+                                <li><a href="#jq">JQPlot</a></li>
+                            </ul>
+                            
+                        </div>
                     </div>
                 </div>
-                <div id="divContent" style="position:relative;top:0px;right:0px;width:684px;min-height:593px;border-left:3px solid gray;padding: 23px;display:inline;float:left;">
-                    <!-- Add your site or application content here -->
-                    
+                <div id="divContent" style="position:relative;top:0px;right:0px;width:684px;min-height:593px;border-left:3px solid gray;padding: 23px;float:right;">
+                     
+                     <!--replace with dynamically created content><!-->                  
                     <p id="D3">
+                        <h2><a href="" >Library</a></h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
+                    </p>
+                    <p id="flotr">
+                        <h2><a href="" >Library</a></h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
+                    </p>
+                    <p id="graph">
+                        <h2><a href="" >Library</a></h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
+                    </p>
+                    <p id="infovis">
+                        <h2><a href="" >Library</a></h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
+                    </p>
+                    <p id="proc">
+                        <h2><a href="" >Library</a></h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
+                    </p>
+                    <script type="text/javascript" src="http://www.google.com/trends/embed.js?hl=en-US&cat=0-5&q=jqplot,+Highcharts,+Dojo+charting,+,+&cmpt=q&content=1&cid=TIMESERIES_GRAPH_AVERAGES_CHART&export=5&w=648&h=330"></script>
+                    <p id="dojo">
+                        <h2><a href="" >Library</a></h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
+                    </p>
+                    <p id="high">
+                        <h2><a href="" >Library</a></h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
+                    </p>
+                    <p id="jq">
                         <h2><a href="" >Library</a></h2>
                         <ul>
                             <li></li>
@@ -73,7 +147,42 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        
+        <!-- load dojo and provide config via data attribute -->
+        <script>
+                djConfig = {
+                        isDebug: false,
+                        parseOnLoad: true
+                };
+        </script>
+        
+	<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.8.3/dojo/dojo.js"></script>
+        <script>
+			
+                // Grab the parser
+                dojo.require("dojo.parser");
+                
+                // Require the basic 2d chart resource: Chart2D
+                dojo.require("dojox.charting.widget.Chart2D");
 
+                // Require the theme of our choosing
+                dojo.require("dojox.charting.themes.PrimaryColors");
+                
+                            
+                // Data represents website visits over a week period
+                chartData = [
+                        { x: "1", y: "" }, //
+                        { x: "1", y: "12837" },
+                        { x: "1", y: "12378" },
+                        { x: "1", y: "21882" },
+                        { x: "1", y: "17654" },
+                        { x: "1", y: "15833" },
+                        { x: "1", y: "16122" }
+                ];
+                
+        </script>
+        
+		
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
