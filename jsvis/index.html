@@ -32,15 +32,8 @@
                     <div id="divSideBarSection" style="width:227px;">
                         <div id="divSideBarP1" style="position:relative;top:0px;left:0px;height:227px;text-align:center;/*padding:set per chart height*//*border: solid red;*/">
                             <!-- create the chart -->
-                            <div dojoType="dojox.charting.widget.Chart2D" theme="dojox.charting.themes.PrimaryColors" id="viewsChart" style="width: 227px; height: 227px;">
-            
-                                    <!-- Pie Chart: add the plot -->
-                                    <div class="plot" name="default" type="Pie" radius="200" fontColor="#000" labelOffset="-20"></div>
-            
-                                    <!-- pieData is the data source -->
-                                    <div class="series" name="Last Week's Visits" array="chartData"></div> 
-            
-                            </div>
+                           
+                            <div id="chartNode" style="width:227px;height:227px;"></div>
                         </div>
                         <div id="divSideBarP2" style="/*border: solid green;*/">
                             <ul>
@@ -105,7 +98,7 @@
                         </ul>
                         <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
                     </p>
-                    <script type="text/javascript" src="http://www.google.com/trends/embed.js?hl=en-US&cat=0-5&q=jqplot,+Highcharts,+Dojo+charting,+,+&cmpt=q&content=1&cid=TIMESERIES_GRAPH_AVERAGES_CHART&export=5&w=648&h=330"></script>
+                    <script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=d3.js,+processing.js,+Flotr2,+raphael.js,+Infovis&cmpt=q&content=1&cid=TIMESERIES_GRAPH_AVERAGES_CHART&export=5&w=648&h=330"></script>
                     <p id="dojo">
                         <h2><a href="" >Library</a></h2>
                         <ul>
@@ -133,6 +126,7 @@
                         </ul>
                         <a href=""><img title="Salary" alt="Salary"  height="" width="" src="./images/" /></a>
                     </p>
+                    <script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&cat=0-5&q=jqplot,+Highcharts,+Dojo+charting&cmpt=q&content=1&cid=TIMESERIES_GRAPH_AVERAGES_CHART&export=5&w=648&h=330"></script>
                 </div> 
                 
             </div>
@@ -156,31 +150,85 @@
                 };
         </script>
         
-	<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.8.3/dojo/dojo.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.3/dojo/dojo.js"></script>
         <script>
-			
-                // Grab the parser
-                dojo.require("dojo.parser");
-                
-                // Require the basic 2d chart resource: Chart2D
-                dojo.require("dojox.charting.widget.Chart2D");
 
-                // Require the theme of our choosing
-                dojo.require("dojox.charting.themes.PrimaryColors");
-                
-                            
-                // Data represents website visits over a week period
-                chartData = [
-                        { x: "1", y: "" }, //
-                        { x: "1", y: "12837" },
-                        { x: "1", y: "12378" },
-                        { x: "1", y: "21882" },
-                        { x: "1", y: "17654" },
-                        { x: "1", y: "15833" },
-                        { x: "1", y: "16122" }
-                ];
-                
+            require([
+			 // Require the basic chart class
+			"dojox/charting/Chart",
+
+			// Require the theme of our choosing
+			"dojox/charting/themes/PrimaryColors",
+			
+			// Charting plugins: 
+
+			// 	We want to plot a Pie chart
+			"dojox/charting/plot2d/Pie",
+
+			// Retrieve the Legend, Tooltip, and MoveSlice classes
+			"dojox/charting/action2d/Tooltip",
+			"dojox/charting/action2d/MoveSlice",
+			
+			//	We want to use Markers
+			"dojox/charting/plot2d/Markers",
+
+			//	We'll use default x/y axes
+			"dojox/charting/axis2d/Default",
+
+			// Wait until the DOM is ready
+			"dojo/domReady!"
+                    ], function(Chart, theme, Pie, Tooltip, MoveSlice, Legend) {
+
+			// Define the data
+			//var chartData = [10,2,10,3,18,9,1,17,];
+                        
+			
+			// Create the chart within it's "holding" node
+			var chart = new Chart("chartNode");
+
+			// Set the theme
+			chart.setTheme(theme);
+
+			// Add the only/default plot 
+			chart.addPlot("default", {
+				type: Pie,
+				markers: true,
+				radius:100
+			});
+ 
+                        //Add my data and labels
+                        chart.addSeries("Libraries", [
+                                {y: 10, text: "D3", tooltip: "D3.js"},
+                                {y: 2, text: "Dojo",  tooltip: "Dojo Charting (me)"},
+                                {y: 10, text: "Processing", tooltip: "Processing.js"},
+                                {y: 3, text: "gRaphael",  tooltip: "gRaphael.js"},
+                                {y: 18, text: "InfoVis",  tooltip: "InfoVis"},
+                                {y: 9, text: "JqPlot",  tooltip: "JqPlot.js"},
+                                {y: 17, text: "HighCharts",  tooltip: "HighCharts.js"},
+                                {y: 1, text: "Flotr2",  tooltip: "Flotr2"},
+                        ]);
+			
+			// Add axes
+			chart.addAxis("x");
+			chart.addAxis("y", { min: 5000, max: 30000, vertical: true, fixLower: "major", fixUpper: "major" });
+
+			
+			// Create the tooltip
+			var tip = new Tooltip(chart,"default");
+			
+			// Create the slice mover
+			var mag = new MoveSlice(chart,"default");
+			
+			// Render the chart!
+			chart.render();
+                        
+                        //Add our legend
+                        var legend = new dojox.charting.widget.Legend({chart: chart}, "legend");
+
+		});
         </script>
+                
+       
         
 		
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
