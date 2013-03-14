@@ -101,12 +101,38 @@ body{
     overflow-y: scroll;
     overflow: -moz-scrollbars-vertical;
     background: none repeat scroll 0% 0% rgb(239, 236, 230);
+    font:23px/33px "Georgia";
+    }
+h1,h2{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: lighter;
+    }
+    
+h1{font-size:220%;}
+h2{font-size:200%;}
+
+a {color:#000;}      /* unvisited link */
+a:visited {color:#000;}  /* visited link */
+a:hover {color:#000;}  /* mouse over link */
+a:active {color:#000;}  /* selected link */
+
+#divMain{}
+
+#divSideBar{}
+
+#divContent{}
+
+a{text-decoration: none;}
+
+#divSideBar li{
+    list-style: none;
     }
 
+#divContent li{list-style:square;}
 
-
-
-
+ul li img {
+    vertical-align: top;
+}
 
 
 
