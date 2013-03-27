@@ -122,18 +122,44 @@ a:visited {color:#000;}  /* visited link */
 a:hover {color:#000;}  /* mouse over link */
 a:active {color:#000;}  /* selected link */
 
+a{text-decoration: none;}
+
 #divMain {
     width:960px;
     min-height:593px;
     margin:0 auto;
     background: none repeat scroll 0% 0% rgb(255, 255, 255);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.23);
-    padding:31px;
+    /*padding:31px;*/
     border:5px solid gray;
-    
 }
 
-a{text-decoration: none;}
+nav{
+    width:462px;
+    height:66px;
+    float:right;
+    text-align: center;
+    margin:0;
+    padding:0;
+    
+    border:1px solid red;
+}
+
+nav ul li{
+    display: inline;
+    /*float:left;*/
+    margin:0 5px;
+    /*width:135px;*/
+    padding:0px;
+    
+    text-align: center;
+    
+    border:1px solid green;
+    }
+
+nav ul li div {
+    width:135px;
+}
 
 
 
