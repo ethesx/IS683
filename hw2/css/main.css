@@ -135,32 +135,33 @@ a{text-decoration: none;}
 }
 
 nav{
-    width:462px;
-    height:66px;
+    width:369px;
+    height:53px;
     float:right;
-    text-align: center;
-    margin:0;
-    padding:0;
-    
     border:1px solid red;
 }
 
-nav ul li{
-    display: inline;
-    /*float:left;*/
-    margin:0 5px;
-    /*width:135px;*/
-    padding:0px;
-    
-    text-align: center;
-    
-    border:1px solid green;
+nav ul{
+    height:100%;
+    margin:0;
+    padding:0;
+    border:1px solid blue;
     }
 
-nav ul li div {
-    width:135px;
-}
-
+nav ul li{
+  
+    font-size: 60%;
+    float:left;
+    margin:13px 0 0 8px;
+    width:30%;
+    height:auto;
+    padding:0;
+    text-align: center;
+    line-height:100%;
+    border:1px solid green;
+    background-color: gray;
+    }
+nav a{color:white!important;}
 
 
 
