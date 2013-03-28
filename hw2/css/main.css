@@ -125,6 +125,7 @@ a:active {color:#000;}  /* selected link */
 a{text-decoration: none;}
 
 #divMain {
+    position:relative;
     width:960px;
     min-height:593px;
     margin:0 auto;
@@ -164,12 +165,44 @@ nav ul li{
 nav a{color:white!important;}
 
 
+#asideMainPage{
+    position:absolute;
+    bottom: 0;
+    width:369px;
+    height:366px;
+    border:1px solid black;
+}
 
+#asideMainPage header{
+    
+    width:328px;
+    height:58px;
+    margin:10px 20px;
+    text-align: center;
+    line-height: 58px;
+    border:1px solid black;
+}
 
+#asideMainPage header h4{
+    padding: 0;
+    margin:0;
+}
 
+#asideMainPage #divSection{
 
-
-
+    
+   /* border:1px solid red;*/
+}
+#asideMainPage #divSection section{
+    
+    width:140px;
+    height:70px;
+    float:left;
+    margin:10px 21px;
+    text-align: center;
+    
+    border:1px solid blue;
+}
 
 
 
