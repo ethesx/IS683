@@ -219,6 +219,7 @@ nav ul li.selected{
     margin:10px 20px;
     text-align: center;
     line-height: 58px;
+    background-color: rgb(239, 236, 230);
     border:1px solid black;
 }
 
@@ -234,7 +235,7 @@ nav ul li.selected{
     float:left;
     margin:10px 21px;
     text-align: center;
-    
+    background-color: rgb(239, 236, 230);
     border:1px solid black;
 }
 
@@ -256,6 +257,7 @@ nav ul li.selected{
     padding:24px;
     overflow-y: scroll;
     max-height:285px;
+    background-color: rgb(239, 236, 230);
     border:1px solid black;
 }
 .divMainPageContent article p, .divContentPageContent article p{
