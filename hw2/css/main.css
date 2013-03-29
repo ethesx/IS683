@@ -269,13 +269,18 @@ nav ul li.selected{
 .asideContentPage{
     position:absolute;
     bottom: 0;
-    width:227px;
-    height:366px;
+    width:207px;
+    height:346px;
+    padding:10px;
     overflow-y: auto;
     
     border:1px solid black;
 }
 
+.asideContentPage .divSection{
+    
+    border:1px solid black;
+}
 
 .asideContentPage section{
     text-align: left;
