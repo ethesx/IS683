@@ -270,6 +270,8 @@ nav a{color:white!important;}
 .asideContentPage section{
     text-align: left;
     padding:10px 16px 15px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .divContentPageContent{
