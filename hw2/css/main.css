@@ -111,13 +111,44 @@ h1,h2,h3,h4,h5,h6{
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: lighter;
     }
-    
+
+/*Standard sizes*/    
 h1{font-size:220%;}
 h2{font-size:200%;}
 h3{font-size:180%;}
 h4{font-size:160%;}
 h5{font-size:140%;}
 h6{font-size:120%;}
+
+/*Page specific aside header sizes*/
+
+.asideMainPage h1{font-size:160%;}
+.asideMainPage h2{font-size:140%;}
+.asideMainPage h3{font-size:120%;}
+.asideMainPage h4{font-size:100%;}
+.asideMainPage h5{font-size:80%;}
+.asideMainPage h6{font-size:60%;}
+
+.asideContentPage h1{font-size:100%;}
+.asideContentPage h2{font-size:80%;}
+.asideContentPage h3{font-size:100%;}
+.asideContentPage h4{font-size:80%;}
+.asideContentPage h5{font-size:60%;}
+.asideContentPage h6{font-size:40%;}
+
+.asideMainPage header h1,
+.asideContentPage h1{
+    padding:0;
+    margin:0;
+}
+
+.asideContentPage h2{
+    padding-left:10px;
+    margin:0;
+}
+
+/*END Page specific aside header sizes*/
+
 
 a {color:#000;}      /* unvisited link */
 a:visited {color:#000;}  /* visited link */
@@ -185,11 +216,6 @@ nav a{color:white!important;}
     border:1px solid black;
 }
 
-.asideMainPage header h4, .asideContentPage h6{
-    padding: 0;
-    margin:0;
-}
-
 .asideMainPage divSection{
 
     
@@ -243,17 +269,27 @@ nav a{color:white!important;}
 
 .asideContentPage section{
     text-align: left;
-    padding:5px 16px 32px;
+    padding:10px 16px 15px;
 }
 
 .divContentPageContent{
     position:absolute;
-    bottom:0;
+    bottom:90px;
     right:0;
     width:730px;
-    height:366px;
+    height:276px;
     
     border:1px solid red;
+}
+
+.divContentPageContent article{
+    /*width:100%;
+    height:100%;*/
+    margin:10px 12px;
+    padding:24px;
+    overflow-y: scroll;
+    max-height:204px;
+    border:1px solid green;
 }
 
 #divIab{
