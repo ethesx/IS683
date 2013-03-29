@@ -122,12 +122,12 @@ h6{font-size:120%;}
 
 /*Page specific aside header sizes*/
 
-.asideMainPage h1{font-size:160%;}
-.asideMainPage h2{font-size:140%;}
-.asideMainPage h3{font-size:120%;}
-.asideMainPage h4{font-size:100%;}
-.asideMainPage h5{font-size:80%;}
-.asideMainPage h6{font-size:60%;}
+.asideMainPage h1{font-size:140%;}
+.asideMainPage h2{font-size:120%;}
+.asideMainPage h3{font-size:100%;}
+.asideMainPage h4{font-size:80%;}
+.asideMainPage h5{font-size:60%;}
+.asideMainPage h6{font-size:50%;}
 
 .asideContentPage h1{font-size:100%;}
 .asideContentPage h2{font-size:80%;}
